@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function CityFun(props) {
+    const [count, setCount] = useState(0);
+
     return (
         <div>
-            <h1>This city is good</h1>
+            <h1>This city renk {count}</h1>
+            <button onClick={() => setCount(count + 1)}>
+                add 
+            </button>
         </div>
     );
 }
