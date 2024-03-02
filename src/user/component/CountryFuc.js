@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CityFun from './CityFun';
 
 export default function CountryFuc() {
   // const [count, setCount] = useState(0);
@@ -20,6 +21,8 @@ export default function CountryFuc() {
       <button onClick={hendalchange}>
         onClick
       </button>
+
+      <CityFun cn={country} tz={Timezone} />
     </div>
   )
 }

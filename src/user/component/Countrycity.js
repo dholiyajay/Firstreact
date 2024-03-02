@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Citycountry from './Citycountry';
 
 function Countrycity(props) {
-    const [CountryName, setCountryName] = useState(props.countryName);
+    const [CountryName, setCountryName] = useState("india");
     const [City, setCity] = useState("surat");
 
     const  handleSubmit=()=>{

@@ -6,7 +6,7 @@ function Citycountry(props) {
 
     return (
         <>
-          
+
             <h1>City name:{City} {props.City}</h1>
 
         </>

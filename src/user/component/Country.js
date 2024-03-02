@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import City from './City';
 
 export default class Country extends Component {
     constructor(props) {
@@ -29,6 +30,8 @@ export default class Country extends Component {
 
 
                 <button onClick={this.handlechange}>onClick</button>
+
+                <City CountryName={this.state.name} />
 
             </>
         );
