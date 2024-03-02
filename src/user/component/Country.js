@@ -5,7 +5,7 @@ export default class Country extends Component {
         super(props);
         this.state = {
             name: "india",
-            Timezone: "UTC+5:30"
+            Timezone: " UTC+5:30"
 
         }
     }
