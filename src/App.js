@@ -6,9 +6,11 @@ import CityFun from './user/component/CityFun';
 // import Counter from './user/component/Counter';
 // import Country from './user/component/Country';
 import CountryFuc from './user/component/CountryFuc';
+import Docter from './user/container/Docter';
 import Medicines from './user/container/Medicines';
 // import Countrycity from './user/component/Countrycity';
 // import Dec from './user/component/Dec';
+
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
       {/* <Dec /> */}
       {/* <Countrycity /> */}
       {/* <Citycountry /> */}
-      <Medicines/>
+      <Medicines />
+      <Docter />
     </>
 
   );

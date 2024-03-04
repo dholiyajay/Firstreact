@@ -1,0 +1,48 @@
+/* Crad.module.css */
+
+.cardContainer {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardContainer:hover {
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.cardHighlight {
+  font-weight: bold;
+  color: #e44d26;
+}
+
+.cardFooter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6c757d;
+}
+
+.cardFooter a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.cardFooter a:hover {
+  text-decoration: underline;
+}
