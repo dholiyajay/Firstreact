@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from "./Crad.module.css";
 // import styles from '../component/Crad.css';
 
@@ -17,8 +16,6 @@ function Card({ data }) {
             <h4 className={styles.cardFees}>{data.fees}</h4>
             <h4  className={styles.cardTitle}>{data.speciality}</h4>
             <h4  className={styles.cardTitle}>{data.hospital}</h4>
-
-
 
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Card from '../component/Card';
+import Card from '../../component/Card/Card';
 // import styles from "./Crad.module.css";
 
 
@@ -27,7 +27,7 @@ const Docterdetails = [
     }
 ]
 
-export default class Docter extends Component {
+export default class Doctor extends Component {
 
     constructor(props) {
         super(props);
@@ -40,7 +40,7 @@ export default class Docter extends Component {
             <>
                 {
                     this.state.doctors.map((v, i) => (
-                        <Card  data={v} />
+                        <Card data={v} />
                     ))
                 }
             </>
