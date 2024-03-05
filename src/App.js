@@ -10,6 +10,7 @@ import Doctor from './user/container/doctor/Doctor';
 import Medicines from './user/container/medicines/Medicines';
 // import Countrycity from './user/component/Countrycity';
 // import Dec from './user/component/Dec';
+import Home from './user/component/Home'
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
       {/* <Dec /> */}
       {/* <Countrycity /> */}
       {/* <Citycountry /> */}
-      <Medicines />
-      <Doctor />
+      {/* <Medicines /> */}
+      {/* <Doctor /> */}
+      <Home/>
     </>
 
   );
