@@ -11,6 +11,8 @@ import Medicines from './user/container/medicines/Medicines';
 // import Countrycity from './user/component/Countrycity';
 // import Dec from './user/component/Dec';
 import Home from './user/component/Home'
+import Time from './user/container/time/Time';
+import TimeFuc from './user/container/time/TimeFuc';
 
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
       {/* <Citycountry /> */}
       {/* <Medicines /> */}
       {/* <Doctor /> */}
-      <Home/>
+      {/* <Home/> */}
+      <Time />
+      <TimeFuc />
     </>
 
   );
