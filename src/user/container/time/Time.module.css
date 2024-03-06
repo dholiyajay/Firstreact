@@ -1,3 +1,43 @@
-.crad{
-    background-color: aqua;
+/* Time.module.css */
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2c3e50; /* Background color */
+    color: #ecf0f1; /* Text color */
+    font-family: 'Open Sans', sans-serif; /* Change the font family if needed */
 }
+
+.digital {
+    font-size: 4em;
+    letter-spacing: 4px;
+}
+
+.clock {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.button {
+    margin-top: 30px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db; /* Button background color */
+    color: #ecf0f1; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9; /* Hover background color */
+}
+
+/* Add more styles as needed */

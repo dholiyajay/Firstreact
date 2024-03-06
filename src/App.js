@@ -13,6 +13,8 @@ import Medicines from './user/container/medicines/Medicines';
 import Home from './user/component/Home'
 import Time from './user/container/time/Time';
 import TimeFuc from './user/container/time/TimeFuc';
+import Producat from './user/container/producat/Producat';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -29,8 +31,9 @@ function App() {
       {/* <Medicines /> */}
       {/* <Doctor /> */}
       {/* <Home/> */}
-      <Time />
-      <TimeFuc />
+      {/* <Time /> */}
+      {/* <TimeFuc /> */}
+      <Producat />
     </>
 
   );
