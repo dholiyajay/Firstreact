@@ -15,6 +15,7 @@ import Time from './user/container/time/Time';
 import TimeFuc from './user/container/time/TimeFuc';
 import Producat from './user/container/producat/Producat';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './user/container/producat/Header'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       {/* <Time /> */}
       {/* <TimeFuc /> */}
       <Producat />
+      {/* <Header /> */}
     </>
 
   );
