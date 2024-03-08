@@ -7,6 +7,8 @@ function Producat(props) {
     const [Producat, Setproduct] = useState([]);
     const [select, setselect] = useState([]);
     const [Categories, setCategories] = useState([]);
+    const [data, setdata] = useState('');
+    // console.log(data);
 
     useEffect(() => {
         getdata();
@@ -18,16 +20,26 @@ function Producat(props) {
         setproducatdata(data);
 
         // Extract unique categories from the data and remove duplicates
-        const categories = [...new Set(data.map((v, i) => v.category))];
-        setCategories(categories);
-        console.log(Categories);
+        // const categories = [...new Set(data.map((v, i) => v.category))];
+        // setCategories(categories);
+        // console.log(Categories);
+
+        const uinque = [];
+
+        data.map((v, i) => {
+            if (!uinque.includes(v.category)) {
+                uinque.push(v.category);
+            }
+        });
+
+        setCategories(uinque);
 
     };
 
 
 
     const searchData = () => {
-        const filteredData = producatdata.filter(
+        let filteredData = producatdata.filter(
             (v) =>
                 v.title.toLowerCase().includes(Producat) ||
                 v.description.toLowerCase().includes(Producat) ||
@@ -46,9 +58,13 @@ function Producat(props) {
             }
         });
 
+        if (data) {
+            filteredData = filteredData.filter(v => v.category === data);
+        }
 
 
-        return sortedData;
+
+        return filteredData;
     };
 
 
@@ -56,6 +72,7 @@ function Producat(props) {
     const finaldata = searchData();
 
     return (
+
         <div className="container">
             <input type="text" placeholder="Search" id="search" onChange={(event) => Setproduct(event.target.value)} />
             <select onChange={(event) => setselect(event.target.value)}>
@@ -69,11 +86,11 @@ function Producat(props) {
             <div className="row">
                 <div>
                     <ul>
-                        {Categories.map((category, index) => (
-
-                            <button onClick={() => setCategories(Categories)}>{category}</button>
+                        <button style={{backgroundColor: data === '' ? 'red' : 'yellow'}} onClick={() => setdata('')}>All</button>
+                        {Categories.map((v, i) => (
+                            <button style={{backgroundColor: data === v ? 'red' : 'yellow'}} onClick={() => setdata(v)}>{v}</button>
                         ))}
-                        
+
                     </ul>
                 </div>
 
