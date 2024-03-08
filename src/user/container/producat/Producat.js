@@ -17,7 +17,8 @@ function Producat(props) {
         const data = await respons.json();
         setproducatdata(data);
 
-        // Extract unique categories from the data and remove duplicates
+        
+
         const categories = [...new Set(data.map((v, i) => v.category))];
         setCategories(categories);
         console.log(Categories);
