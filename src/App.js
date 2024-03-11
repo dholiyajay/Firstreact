@@ -10,7 +10,7 @@ import Doctor from './user/container/doctor/Doctor';
 import Medicines from './user/container/medicines/Medicines';
 // import Countrycity from './user/component/Countrycity';
 // import Dec from './user/component/Dec';
-import Home from './user/component/Home'
+// import Home from './user/component/Home'
 import Time from './user/container/time/Time';
 import TimeFuc from './user/container/time/TimeFuc';
 import Producat from './user/container/producat/Producat';
@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './user/component/Header/Header';
 import Content from './user/container/Content/Content';
 import { Route, Routes } from 'react-router-dom';
+import Home from './user/container/Home/Home';
 
 
 
