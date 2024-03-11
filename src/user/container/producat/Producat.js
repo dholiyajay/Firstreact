@@ -8,6 +8,7 @@ function Producat(props) {
     const [select, setselect] = useState([]);
     const [Categories, setCategories] = useState([]);
     const [data, setdata] = useState('');
+    const [loading, setloading] = useState(false);
     // console.log(data);
 
     useEffect(() => {
@@ -19,12 +20,11 @@ function Producat(props) {
         const data = await respons.json();
         setproducatdata(data);
 
-        // Extract unique categories from the data and remove duplicates
-        // const categories = [...new Set(data.map((v, i) => v.category))];
-        // setCategories(categories);
-        // console.log(Categories);
-
+        
         const uinque = [];
+
+        setloading(true,9000);
+        
 
         data.map((v, i) => {
             if (!uinque.includes(v.category)) {
@@ -33,10 +33,7 @@ function Producat(props) {
         });
 
         setCategories(uinque);
-
     };
-
-
 
     const searchData = () => {
         let filteredData = producatdata.filter(
@@ -62,18 +59,18 @@ function Producat(props) {
             filteredData = filteredData.filter(v => v.category === data);
         }
 
-
-
         return filteredData;
     };
 
-
-
     const finaldata = searchData();
 
-    return (
+    
 
+    return (
         <div className="container">
+          {
+            loading === false ? <h1>Loading...</h1> : ''
+          }
             <input type="text" placeholder="Search" id="search" onChange={(event) => Setproduct(event.target.value)} />
             <select onChange={(event) => setselect(event.target.value)}>
                 <option value="0">select</option>
@@ -86,11 +83,10 @@ function Producat(props) {
             <div className="row">
                 <div>
                     <ul>
-                        <button style={{backgroundColor: data === '' ? 'red' : 'yellow'}} onClick={() => setdata('')}>All</button>
+                        <button style={{ backgroundColor: data === '' ? 'red' : 'yellow' }} onClick={() => setdata('')}>All</button>
                         {Categories.map((v, i) => (
-                            <button style={{backgroundColor: data === v ? 'red' : 'yellow'}} onClick={() => setdata(v)}>{v}</button>
+                            <button style={{ backgroundColor: data === v ? 'red' : 'yellow' }} onClick={() => setdata(v)} key={i}>{v}</button>
                         ))}
-
                     </ul>
                 </div>
 
