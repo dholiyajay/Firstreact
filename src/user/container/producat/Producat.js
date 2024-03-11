@@ -9,7 +9,7 @@ function Producat(props) {
     const [select, setselect] = useState([]);
     const [Categories, setCategories] = useState([]);
     const [data, setdata] = useState('');
-    const [loading, setloading] = useState(false);
+    const [loading, setloading] = useState(true);
     // console.log(data);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function Producat(props) {
 
         const uinque = [];
 
-        setloading(true);
+        setloading(false);
 
 
         data.map((v, i) => {
@@ -70,17 +70,20 @@ function Producat(props) {
     return (
         <div className="container">
             {
-                loading === false ? <>
-                    <ThreeDots
-                        visible={true}
-                        height="80"
-                        width="80"
-                        color="#4fa94d"
-                        radius="9"
-                        ariaLabel="three-dots-loading"
-                        wrapperStyle={{}}
-                        wrapperClass=""
-                    />
+                loading ? <>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <ThreeDots
+                            visible={true}
+                            height="80"
+                            width="80"
+                            color="#4fa94d"
+                            radius="9"
+                            ariaLabel="three-dots-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        />
+                    </div>
+
                 </> : (
                     <>
 

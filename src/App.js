@@ -15,7 +15,10 @@ import Time from './user/container/time/Time';
 import TimeFuc from './user/container/time/TimeFuc';
 import Producat from './user/container/producat/Producat';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './user/container/producat/Header'
+import Header from './user/component/Header/Header';
+import Content from './user/container/Content/Content';
+import { Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -34,8 +37,18 @@ function App() {
       {/* <Home/> */}
       {/* <Time /> */}
       {/* <TimeFuc /> */}
-      <Producat />
+      {/* <Producat /> */}
       {/* <Header /> */}
+      <Header />
+
+
+    <Routes>
+      <Route exact path = "/" element={<Home/>} />
+      <Route exact path = "/Producat" element={<Producat/>} />
+      <Route exact path = "/Content" element={<Content/>} />
+
+    </Routes>
+
     </>
 
   );
