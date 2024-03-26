@@ -19,6 +19,8 @@ import Header from './user/component/Header/Header';
 import Content from './user/container/Content/Content';
 import { Route, Routes } from 'react-router-dom';
 import Home from './user/container/Home/Home';
+import Employee from './user/container/Employee/Employee';
+import Counter from './user/container/Counter/Counter';
 
 
 
@@ -40,15 +42,17 @@ function App() {
       {/* <TimeFuc /> */}
       {/* <Producat /> */}
       {/* <Header /> */}
-      <Header />
+      {/* <Header /> */}
+      <Employee />
+      <Counter />
 
 
-    <Routes>
-      <Route exact path = "/" element={<Home/>} />
-      <Route exact path = "/Producat" element={<Producat/>} />
-      <Route exact path = "/Content" element={<Content/>} />
+      {/* <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/Producat" element={<Producat />} />
+        <Route exact path="/Content" element={<Content />} />
 
-    </Routes>
+      </Routes> */}
 
     </>
 
